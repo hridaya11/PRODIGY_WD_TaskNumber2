@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 100rem;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.outer-circle {
+    width: 280px; 
+    height: 280px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-bg {
+    background: linear-gradient(-45deg, rgb(255, 0, 0), red, rgb(14, 95, 208), rgb(205, 20, 218));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.inner-circle {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: aliceblue;
+    font-size: 35px;
+}
+.min {
+    font-size: 32px;
+}
+.sec {
+    font-size: 30px;
+}
+.msec {
+    font-size: 20px;
+}
+.btn-wrapper {
+    width: 200px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+.laps {
+    list-style: none;
+    width: 250px;
+    color: white;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+.laps::-webkit-scrollbar {
+    display: none;
+}
+.laps-item {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.num {
+    color: beige;
+}
+.time-stamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+.lap-clear-btn {
+    display: block;
+    position: fixed;
+    bottom: 35px;
+    z-index: 1000;
+    left: 50%;
+    transform: translate(-50%);
+    width: 130px;
+    padding: 10px 0;
+    border-radius: 50px;
+    background-color: rgb(86, 84, 84);
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+}
+.hidden {
+    visibility: hidden;
+}
